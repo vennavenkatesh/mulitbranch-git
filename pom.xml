@@ -34,4 +34,16 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+    <repository>
+         <id>nexus</id>
+         <name>devops-institute</name>
+         <url>http://3.109.55.31:8081/repository/sample-repo/</url>
+    </repository>
+    <snapshotRepository>
+         <id>nexus</id>
+         <name>devops-institute</name>
+         <url>http://3.109.55.31:8081/repository/sample-repo-snaphot/</url>
+    </snapshotRepository>
+    </distributionManagement>
 </project>
