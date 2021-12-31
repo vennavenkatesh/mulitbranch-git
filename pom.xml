@@ -43,7 +43,7 @@
     <snapshotRepository>
          <id>nexus</id>
          <name>devops-institute</name>
-         <url>http://3.110.224.71:8080/repository/app-test-snapshot/</url>
+         <url>http://3.110.224.71:8081/repository/app-test-snapshot/</url>
     </snapshotRepository>
     </distributionManagement>
 </project>
