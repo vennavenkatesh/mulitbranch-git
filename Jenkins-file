@@ -57,7 +57,7 @@ pipeline {
             steps {
                 echo "Deploy into tomcat server"
                 sh "cd $WORKSPACE/target/"
-                sh "scp -r *.war tomcat@3.109.56.173:/opt/apache-tomcat-9.0.56/webapps/"
+                sh "cd $WORKSPACE/target/ && scp -r *.war tomcat@3.109.56.173:/opt/apache-tomcat-9.0.56/webapps/"
                 
                 echo " Deployment has been completed successfully"
             }    
