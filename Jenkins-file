@@ -32,7 +32,7 @@ pipeline {
          stage("Nexus-Deploy") {
             steps {
                 echo "executing the test cases"
-                //sh "cd $WORKSPACE && mvn clean deploy"
+                sh "cd $WORKSPACE && mvn clean deploy"
             }
         }
 
