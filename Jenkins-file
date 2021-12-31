@@ -3,14 +3,15 @@ pipeline {
     
     parameters {
         string(name: 'IP', description: 'Please enter you backend IP')
-        string(name: 'GIT', description: 'Please enter your Git url')
-        string(name: 'branch_name', description: 'Please enter your branch')
+        //string(name: 'GIT', description: 'Please enter your Git url')
+        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH', useRepository: 'https://github.com/vennavenkatesh/devops-sample.git'
+        //string(name: 'branch_name', description: 'Please enter your branch')
     }
     stages {
         stage("Git checkout") {
             steps {
                 echo "checkout the code from bitbucket"
-                git branch: "${params.branch_name}", url: "${params.GIT}" , poll: true
+                git branch: "${params.branch_name}", url: "https://github.com/vennavenkatesh/devops-sample.git" , poll: true
             }
         }
         
